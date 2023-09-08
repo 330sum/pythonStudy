@@ -18,6 +18,13 @@ def add_plus_1(number):
     return number + 1
 
 
-# (2 + 1) + (3 + 1) + 1 = 8
+# (2+1) + (3+1) + 1 = 8
 ret_val = add_with_transform(2, 3, add_plus_1)
 print(ret_val)
+
+print(add_with_transform(2, 3, lambda x: x + 1))
+print(add_with_transform(10, 4, lambda x: x + 2))
+# (10+2) + (4+2) + 2
+print(add_with_transform(10, 4, lambda x: x / 2))
+# (10/2) + (4/2) / 2
+
