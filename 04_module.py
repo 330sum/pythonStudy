@@ -20,3 +20,9 @@ from calculater import *
 print(add(4, 5))
 print(mul(3, 4))
 print(div(2, 2))
+
+# 7.1.4 다른 이름으로 모듈 불러오기
+# tensorFlow -> tf, pandas -> pd
+import thisIsVeryLongNameModule as l
+
+l.hello()
