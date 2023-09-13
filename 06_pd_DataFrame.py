@@ -57,3 +57,16 @@ heroes_df.to_excel("/Users/superstar_park/PycharmProjects/heroes.xlsx")
 print("========================================")
 # 열 이름 -> 데이터
 print(heroes_df[["name", "position"]])
+
+# 불리언 인덱싱
+print("========================================")
+# 기본
+print(heroes_df[heroes_df.health == 250])
+
+print("========================================")
+# 불리언 인덱싱의 조건 코드 실행
+print(heroes_df.health == 250)
+
+print("========================================")
+# 두 가지 조건을 결합해 불리언 인덱싱 실행
+print(heroes_df[(heroes_df.position == "tank") & (heroes_df.health > 500)])

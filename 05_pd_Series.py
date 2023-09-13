@@ -31,3 +31,8 @@ print((heroes_series[3:7]))  # 3~6 가져오기
 
 # 인덱스(문자열) -> 데이터
 print(heroes_series['dva'])
+
+# 불리언 인덱싱
+print("========================================")
+# 기본
+print(heroes_series[heroes_series >= 250])
