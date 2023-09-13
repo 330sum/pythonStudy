@@ -70,3 +70,20 @@ print(heroes_df.health == 250)
 print("========================================")
 # 두 가지 조건을 결합해 불리언 인덱싱 실행
 print(heroes_df[(heroes_df.position == "tank") & (heroes_df.health > 500)])
+
+print("========================================")
+# #인덱스 기준에 따라 데이터 다루기
+# 인덱스를 id라는 열로 변경하기
+heroes_df.set_index('id', inplace=True)
+print(heroes_df.head())
+
+print("========================================")
+# loc()
+# id값이 3인 행 값을 모두 선택해서 가져옴
+print(heroes_df.loc[3])
+
+print("========================================")
+# iloc()
+# 인덱스가 3인 행 값을 모두 선택해서 가져옴
+print(heroes_df.iloc[3])
+
