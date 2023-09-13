@@ -50,3 +50,5 @@ print(heroes_df)
 heroes_df.to_csv("/Users/superstar_park/PycharmProjects/heroes.csv")
 
 heroes_df.to_excel("/Users/superstar_park/PycharmProjects/heroes.xlsx")
+# heroes_df.to_excel("/Users/superstar_park/PycharmProjects/heroes.xlsx", index=False)
+# index=False 설정하면 인덱스 저장하지 않을 수 있음
