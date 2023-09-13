@@ -46,3 +46,5 @@ heroes = {
 
 heroes_df = pd.DataFrame(heroes)
 print(heroes_df)
+
+heroes_df.to_csv("/Users/superstar_park/PycharmProjects/heroes.csv")
