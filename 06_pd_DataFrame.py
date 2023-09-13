@@ -52,3 +52,8 @@ heroes_df.to_csv("/Users/superstar_park/PycharmProjects/heroes.csv")
 heroes_df.to_excel("/Users/superstar_park/PycharmProjects/heroes.xlsx")
 # heroes_df.to_excel("/Users/superstar_park/PycharmProjects/heroes.xlsx", index=False)
 # index=False 설정하면 인덱스 저장하지 않을 수 있음
+
+# 여러가지 형태로 데이터 다루기
+print("========================================")
+# 열 이름 -> 데이터
+print(heroes_df[["name", "position"]])
