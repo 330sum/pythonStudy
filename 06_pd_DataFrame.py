@@ -48,3 +48,5 @@ heroes_df = pd.DataFrame(heroes)
 print(heroes_df)
 
 heroes_df.to_csv("/Users/superstar_park/PycharmProjects/heroes.csv")
+
+heroes_df.to_excel("/Users/superstar_park/PycharmProjects/heroes.xlsx")
