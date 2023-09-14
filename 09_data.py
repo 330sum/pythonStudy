@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 # 1. 그룹화하기
 # 1-1. 날짜 형식을 계산할 수 있는 타입으로 바꾸기
@@ -34,3 +35,50 @@ print("==========================================")
 # 1-8. get_group()에 South Korea를 설정해 실행하기
 print(by_contry.get_group('South Korea'))
 
+# 2. agg()와 apply()함수로 데이터 가공하기
+print("-----------------------------------------")
+# 2-1. 딕셔너리 타입을 사용하는 agg() 예제
+print(
+    by_contry.agg(
+        {
+            "level":
+                [
+                    ("합계", np.sum),
+                    np.mean,
+                ]
+        }
+    )
+)
+
+print("-----------------------------------------")
+# 2-2. 나라별로 level 열의 중간값(median) 구하기
+print(
+    by_contry.agg(
+        {
+            "level":
+                [
+                    np.size, np.median
+                ]
+        }
+    )
+)
+
+print("-----------------------------------------")
+
+
+# 2-3. 나라별 level의 제곱 합 구하기
+def sum_of_pow(s: pd.core.series.Series):
+    return sum([i ** 2 for i in s])
+
+
+print(by_contry.agg({"level": [sum_of_pow]}).tail())
+
+print("-----------------------------------------")
+
+
+# 2-4. 나라별로 날짜의 최댓값과 최솟값의 차이 구하기
+def get_diff_date(df: pd.core.fram.DataFram):
+    # apply()로 전달하는 함수의 파라미터는 각 그룹의 DataFrame 타입 데이터읻.
+    return df.df_date.max() - df.df_date.min()
+
+by_contry.apply(get_diff_date)
