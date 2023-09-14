@@ -87,3 +87,11 @@ print("========================================")
 # 인덱스가 3인 행 값을 모두 선택해서 가져옴
 print(heroes_df.iloc[3])
 
+print("==========================================")
+# 1-6. 여러 개 인덱스로 그룹화하기
+# postion 열로 먼저 그룹화하고, 그 안에서 health 열을 한 번 더 그룹화한다
+multi_indexed = heroes_df.groupby(['position', 'health'])
+
+# 앞 groupby로 그룹화된 데이터를 설명하는 내용을 출력
+# 각 그룹 안의 전체 정보 (개수, 유일한 값의 개수, 최댓값을 가진 인덱스, 출현 빈도)를 보여줌
+print(multi_indexed.describe())
