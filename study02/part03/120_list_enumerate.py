@@ -5,3 +5,13 @@ print(ret)
 
 for i, body in enumerate(solarsys):
     print('태양계의 %d번째 천체: %s' % (i, body))
+
+
+# ======================================================
+a = ['Mary', 'had', 'a', 'little', 'lamb']
+for i in range(len(a)):
+    print(i, a[i])
+
+for i, val in enumerate(a):
+    print(i, val, a[i])
+
