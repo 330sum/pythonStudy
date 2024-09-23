@@ -1,0 +1,21 @@
+local:
+  DATABASE_1:
+    user_name: 'root'
+    password: '1234'
+    db_host: '127.0.0.1'
+    port: 3306
+    db_name: 'crawl_data'
+    pool_size: 5
+
+# uvicorn 설정
+  UVICORN_CONF:
+    HOST: "127.0.0.1"
+    PORT: 8000
+    RELOAD: True
+    #WORKERS 설정은 RELOAD값이 True이면 적용이 안된다.
+    WORKERS: 1
+    LOG_LEVEL: "debug"
+
+# 이미지 파일 경로
+  IMAGE_FILE_PATH:
+    ROOT: "C:\\prj\\image"
