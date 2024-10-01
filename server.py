@@ -8,12 +8,12 @@ if __name__ == '__main__':
     print(os.path.dirname(os.path.realpath(__file__)))  # 파일이 위치한 디렉토리
 
     here = os.path.dirname(os.path.abspath(__file__))
-    with open(os.path.join(here, './app/config/common.yml'), 'r', encoding='utf-8') as yaml_conf:
+    with open(os.path.join(here, './app_1/config/common.yml'), 'r', encoding='utf-8') as yaml_conf:
         conf = yaml.safe_load(yaml_conf)[os.getenv('APP_ENV', 'local')]
         print(conf)
         uvicorn_conf = conf["UVICORN_CONF"]
 
-    uvicorn.run("app.main:app",
+    uvicorn.run("app_1.main:app_1",
                 host=uvicorn_conf["HOST"],
                 port=uvicorn_conf["PORT"],
                 reload=uvicorn_conf["RELOAD"],

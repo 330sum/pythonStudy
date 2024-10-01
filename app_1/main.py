@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
-from app.common import connectionPool
+from app_1.common import connectionPool
 
-from app.api.data import router as data_router  # data.py에서 라우터 가져오기
+from app_1.api.data import router as data_router  # data.py에서 라우터 가져오기
 
 app = FastAPI(
     title="My API",
